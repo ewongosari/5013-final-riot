@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--For mobile-->
+    <title>PD Finder</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import Materialize CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="sass/styles.css"  media="screen,projection"/>
+  </head>
+
+  <body>
+    <!-- Riot tag for content -->
+
+<!-- navibar -->
+  <nav role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Ed+Tech</a>
+      <ul class="right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="appfindermain.html">App Finder</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="eventfinder.html">PD Finder</a></li>
+          <li><ul class="right hide-on-med-and-down">
+            <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown1'>Your Profile</a>
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Homepage</a></li>
+                <li><a href="#!">Inbox</a></li>
+                <li><a href="#!">Registered Events</a></li>
+                  <li><a href="#!">Bookmarked APPs</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Settings</a></li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br></br>
+  <div align="center">
+              <a class='btn amber accent-4' class="filter-button" href='eventfinder.html'>All</a>
+              <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown2'>Venue</a>
+              <ul id='dropdown2' class='dropdown-content'>
+                  <a href="#"><li class="filter-button" id="Online">Online</li></a>
+                  <a href="#"><li class="filter-button" id="Onsite">Onsite</li></a>
+              </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown3'>Date</a>
+             <ul id='dropdown3' class='dropdown-content'>
+               <a href="#"><li class="filter-button" id="January-March">January-March</li></a>
+               <a href="#"><li class="filter-button" id="April-June">April-June</li></a>
+               <a href="#"><li class="filter-button" id="July-September">July-September</li></a>
+               <a href="#"><li class="filter-button" id="October-December">October-December</li></a>
+             </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown4'>Location</a>
+             <ul id='dropdown4' class='dropdown-content'>
+             </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown5'>Type</a>
+             <ul id='dropdown5' class='dropdown-content'>
+               <a href="#"><li class="filter-button" id="Conference">Conference</li></a>
+               <a href="#"><li class="filter-button" id="Workshop">Workshop</li></a>
+               <a href="#"><li class="filter-button" id="Webinar">Webinar</li></a>
+             </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown6'>Price</a>
+             <ul id='dropdown6' class='dropdown-content'>
+               <a href="#"><li class="filter-button" id="free">Free</li></a>
+               <li class="filter-button" id="paid">Paid</li>
+             </ul>
+          </div>
+  <br></br>
+
+  <hr style="width: 80%">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+  $('.filter-button').click(function(event){
+     var value = $(this).attr('id');
+      if(value == "all") {
+          $('.filter').show();
+      }
+      else {
+          $(".filter").not('.'+value).hide('5000');
+          $('.filter').filter('.'+value).show('5000');
+      }
+  });
+});
+  </script>
+
+
+  <!-- cards -->
+  <div class="container" style="margin-left: 230px;">
+      <div class="section">
+          <div class="row">
+              <div class="col s4">
+                <div class="card filter paid Conference Onsite January-March">
+                      <div class="card-image">
+                          <a href="http://www.fetc.org/"><img src="img/7.png"></a>
+                          <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                      </div>
+                      <div class="card-content">
+                        <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“Future of Education Technology Conference”</span>
+                          <p>It is the largest, national, independent education technology conference, that annually attracts thousands of education and technology leaders from around the world.</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="chip card-panel grey lighten-3" href="#">Date: January 23-26, 2018</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Location: Orlando, FL</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Venue: Onsite</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Type: Conference</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                      </div>
+                    </div>
+                  </div>
+
+              <div class="col s4">
+                  <div class="card filter paid Onsite Conference April-June">
+                      <div class="card-image">
+                          <a href=" https://conference.iste.org/2018/"><img src= "img/8.png"></a>
+                          <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                      </div>
+                      <div class="card-content">
+                          <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“ISTE 2018”</span>
+                          <p>It is is the place where educator-tested strategies come together with proven resources for transforming learning and teaching, and for connecting with other innovative educators.</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="chip card-panel grey lighten-3" href="#">Date: June 24-27, 2018</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Location: Chicago, IL</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Venue: Onsite</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Type: Conference</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col s4">
+                  <div class="card filter January-March paid Onsite Conference">
+                      <div class="card-image">
+                          <a href=" https://www.sxswedu.com/"><img src=" https://pbs.twimg.com/profile_images/879352882109140992/eJffGT8z.jpg"></a>
+                          <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                      </div>
+                      <div class="card-content">
+                        <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“SXSW Edu”</span>
+                          <p>It fosters innovation in learning by hosting a community of optimistic, forward-thinking, purpose-driven stakeholders with a shared goal of impacting the future of teaching and learning.</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="chip card-panel grey lighten-3" href="#">Date: March 5-8, 2018</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Location: Austin, TX</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Venue: Onsite</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Type: Conference</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="container" style="margin-left: 230px;">
+              <div class="section">
+                  <div class="row">
+                      <div class="col s4">
+                          <div class="card filter paid October-December Onsite Conference">
+                              <div class="card-image">
+                                  <a href=" https://www.nyedtechweek.com/"><img src="img/2.png"></a>
+                                  <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                              </div>
+                              <div class="card-content">
+                                <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“NY EdTech Week”</span>
+                                  <p> It is a global education innovation festival, focusing on how entrepreneurship and edtech can drive advancements in education and learning.</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="chip card-panel grey lighten-3" href="#">Date:December 18-20, 2017</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Location: New York, NY</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Venue: Onsite</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Type: Conference</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col s4">
+                          <div class="card filter paid April-June Onsite Worshop ">
+                              <div class="card-image">
+                                  <a href=" https://www.eventbrite.com/e/using-technology-to-support-udl-instruction-tickets-35385007510"><img src="img/5.png"></a>
+                                  <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                              </div>
+                              <div class="card-content">
+                                  <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“Using Technology to Support UDL Instruction”</span>
+                                  <p>It focuses on using the right technologies well to facilitate classroom learning for all students based on the Universal Design framework.</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="chip card-panel grey lighten-3" href="#">Date: June 7, 2018</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Location: New York, NY</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Venue: Onsite</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Type: Workshop</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col s4">
+                          <div class="card filter Workshop Onsite free January-March">
+                              <div class="card-image">
+                                  <a href="https://sites.google.com/site/edcampsiliconvalley/"><img src="img/3.png"></a>
+                                  <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                              </div>
+                              <div class="card-content">
+                                  <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“EdCamp Silicon Valley”</span>
+                                  <p> It is an unconference gathering of educators to talk about relevant issues and ideas that they deem important.</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="chip card-panel grey lighten-3" href="#">Date: January 27, 2018</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Location: Palo Alto, CA</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Venue: Onsite</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Type: Workshop</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                              </div>
+                          </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container" style="margin-left: 230px;">
+                    <div class="section">
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="card filter January-March April-June July-September October-December paid Webinar Online">
+                                    <div class="card-image">
+                                        <a href=" http://practicaledtech.com/2018-practical-ed-tech-coaching-group/"><img src="img/4.png"></a>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                      <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“Practical Ed Tech Coaching Group”</span>
+                                        <p>It is is for teachers, technology coaches, and teacher-librarians who desire to improve their knowledge of and skill in using educational technology.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a class="chip card-panel grey lighten-3" href="#">January 1- December 31, 2018</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Venue: Online</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Type: Webinar</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card filter January-March free Webinar Online">
+                                    <div class="card-image">
+                                    <a href="https://simplek12.lpages.co/event-1-6-2018/?cc=website-sk12-upcoming"><img src=" img/6.png"></a>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">"SimpleK12 Day of Learning: Integrating Tech Tools in Your Classroom"</span>
+                                        <p> It is a 6-session webinar that explores and discusses different topics in educational technology integration in the classroom.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a class="chip card-panel grey lighten-3" href="#">Date: January 6, 2018</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Venue: Online</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Type: Webinar</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s4">
+                                <div class="card filter January-March April-June July-September October-December free Workshop Online">
+                                    <div class="card-image">
+                                        <a href="https://educationcloset.com/steam-workshop/"><img src="img/1.png"></a>
+                                        <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                      <span class="green lighten-1 white-text" style="font-size:115%;font-family:verdana">“ 6 Strategies to STEAM Up The Classroom”</span>
+                                        <p> It is a resource that offers educators clear and practical strategies for incorporating STEAM in their K-12 classrooms without feeling overwhelmed.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a class="chip card-panel grey lighten-3" href="#">Date: Anytime</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Venue: Online</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Type: Workshop</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+<!-- footer -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Learn</h5>
+        <p class="grey-text text-lighten-4">Our website provides a holistic solution to educational technology-related problems that educators experience.</p>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Support</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Team</a></li>
+          <li><a class="white-text" href="#!">Subscribe</a></li>
+          <li class="modal-trigger" data-target="modal3"><a class="white-text" href="#!">Contact Us</a></li>
+          <li class="modal-trigger" data-target="modal4"><a class="white-text" href="#!">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" target="_blank" href="https://www.facebook.com/">Facebook</a></li>
+          <li><a class="white-text" target="_blank" href="https://twitter.com/">Twitter</a></li>
+          <li><a class="white-text" target="_blank" href="https://plus.google.com/">Google+</a></li>
+          <li><a class="white-text" target="_blank" href="https://www.linkedin.com/">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Made by <a class="amber-text accent-4" href="http://materializecss.com">Evelina Wongosari and Tianjiao Zhang</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Import jQuery -->
+<script type="text/javascript" href="js/jquery-3.2.1.min.js"></script>
+<!-- Import Materialize JS -->
+<script type="text/javascript"  href="js/materialize.min.js"></script>
+
+      </body>
+    </html>

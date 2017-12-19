@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--For mobile-->
+    <title>App Finder</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import Materialize CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="sass/styles.css"  media="screen,projection"/>
+  </head>
+
+  <body>
+
+<!-- navibar -->
+  <nav role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Ed+Tech</a>
+      <ul class="right">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="appfindermain.html">App Finder</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="eventfinder.html">PD Finder</a></li>
+          <li><ul class="right hide-on-med-and-down">
+            <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown1'>Your Profile</a>
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Homepage</a></li>
+                <li><a href="#!">Inbox</a></li>
+                <li><a href="#!">Registered Events</a></li>
+                  <li><a href="#!">Bookmarked APPs</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">Settings</a></li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<!-- search bar -->
+  <br></br>
+  <div align="center">
+              <a class='btn amber accent-4' class="filter-button" href='appfindermain.html'>All</a>
+              <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown2'>Grade</a>
+              <ul id='dropdown2' class='dropdown-content'>
+                  <li class="filter-button" id="gradek">K</li>
+                  <li class="filter-button" id="grade1-3">1-3</li>
+                  <li class="filter-button" id="grade4-6">4-6</li>
+                  <li class="filter-button" id="grade7-8">7-8</li>
+                  <li class="filter-button" id="grade9-12">9-12</li>
+                  <a href="#"><li class="filter-button" id="gradek-12">k-12</li></a>
+              </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown3'>Subject</a>
+             <ul id='dropdown3' class='dropdown-content'>
+               <li class="filter-button" id="math">math</li>
+               <li class="filter-button" id="ELA">ELA</li>
+               <li class="filter-button" id="science">science</li>
+               <li class="filter-button" id="social">social</li>
+               <li class="filter-button" id="music">music</li>
+               <li class="filter-button" id="coding">coding</li>
+               <li class="filter-button" id="general">general</li>
+             </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown4'>Platform</a>
+             <ul id='dropdown4' class='dropdown-content'>
+             </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown5'>Type</a>
+             <ul id='dropdown5' class='dropdown-content'>
+             </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown6'>Price</a>
+             <ul id='dropdown6' class='dropdown-content'>
+               <a href="#"><li class="filter-button" id="free">Free</li></a>
+               <li class="filter-button" id="paid">Paid</li>
+             </ul>
+             <a class='dropdown-button btn amber accent-4' href='#' data-activates='dropdown7'>User</a>
+             <ul id='dropdown7' class='dropdown-content'>
+               <a href="#"><li class="filter-button" id="teacher">Teacher</li></a>
+               <li class="filter-button" id="student">Student</li>
+             </ul>
+          </div>
+  <br></br>
+
+  <hr style="width: 80%">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+  $('.filter-button').click(function(event){
+     var value = $(this).attr('id');
+      if(value == "all") {
+          $('.filter').show();
+      }
+      else {
+          $(".filter").not('.'+value).hide('5000');
+          $('.filter').filter('.'+value).show('5000');
+      }
+  });
+});
+  </script>
+
+
+  <!-- cards -->
+  <div class="container" style="margin-left: 230px;">
+      <div class="section">
+          <div class="row">
+              <div class="col s4">
+                <div class="card filter gradek-12 teacher free">
+                      <div class="card-image">
+                          <a href=" https://www.remind.com/"><img src="http://is5.mzstatic.com/image/thumb/Purple128/v4/b5/38/e2/b538e247-707e-7eb6-9c53-f3c5dc078cdb/source/175x175bb.jpg"></a>
+                          <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                      </div>
+                      <div class="card-content">
+                        <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana"><a href="appfinder-detail-1.html">“Remind”</a></span>
+                          <p>It is a communication platform that helps educators reach students and parents where they are.</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="chip card-panel grey lighten-3" href="#">Grade: K-12</a>
+                        <a class="chip card-panel grey lighten-3" href="#">User: Teacher</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Subject: General</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Type: Communication</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+              <div class="col s4">
+                  <div class="card filter gradek-12 free teacher">
+                      <div class="card-image">
+                          <a href="https://kahoot.com/mobile-app/"><img src="http://is1.mzstatic.com/image/thumb/Purple118/v4/7a/c4/4f/7ac44f01-e9dd-a780-81ad-890c35293b3a/source/175x175bb.jpg"></a>
+                          <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                      </div>
+                      <div class="card-content">
+                        <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Kahoot!”</span>
+                          <p>It offers students fun learning games and cool quizzes anywhere and anytime.</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="chip card-panel grey lighten-3" href="#">Grade: K-12</a>
+                        <a class="chip card-panel grey lighten-3" href="#">User: Teacher</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Subject: General</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android, Web</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Type: Assessment, Game/a>
+                        <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col s4">
+                  <div class="card filter gradek-12 teacher free">
+                      <div class="card-image">
+                          <a href="https://www.classdojo.com/"><img src="http://is1.mzstatic.com/image/thumb/Purple128/v4/40/59/95/40599502-583a-2f10-156f-ea081488c433/source/175x175bb.jpg"></a>
+
+                          <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                      </div>
+                      <div class="card-content">
+                        <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“ClassDojo”</span>
+                          <p>It helps teachers build a positive classroom culture by encouraging students and communicating with parents.</p>
+                      </div>
+                      <div class="card-action">
+                        <a class="chip card-panel grey lighten-3" href="#">Grade: K-12</a>
+                        <a class="chip card-panel grey lighten-3" href="#">User: Teacher</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Subject: General</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android, Web</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Type: Communication</a>
+                        <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="container" style="margin-left: 230px;">
+              <div class="section">
+                  <div class="row">
+                      <div class="col s4">
+                          <div class="card filter gradek-12 teacher free">
+                              <div class="card-image">
+                                  <a href="https://goformative.com/"><img src="https://i0.wp.com/andreameyers.com/wp-content/uploads/2017/02/formative_logo.png?resize=300%2C300&ssl=1"></a>
+
+                                  <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                              </div>
+                              <div class="card-content">
+                                  <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Formative”</span>
+                                  <p> It allows teachers to create assignments, deliver them to students, receive results, and provide individualized feedback in real-time.</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="chip card-panel grey lighten-3" href="#">Grade: K-12</a>
+                                <a class="chip card-panel grey lighten-3" href="#">User: Teacher, student</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Subject: General</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Platform: Web</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Type: Assessment</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col s4">
+                          <div class="card filter gradek-12 teacher student free">
+                              <div class="card-image">
+                                  <a href="https://web.seesaw.me/"><img src="http://is4.mzstatic.com/image/thumb/Purple128/v4/3d/7e/a3/3d7ea309-a47a-2633-e060-1c741488488e/source/175x175bb.jpg"></a>
+
+                                  <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                              </div>
+                              <div class="card-content">
+                                <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Seesaw”</span>
+                                  <p>It empowers students to create, reflect on, collaborate, and share their digital portfolio.</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="chip card-panel grey lighten-3" href="#">Grade: K-12</a>
+                                <a class="chip card-panel grey lighten-3" href="#">User: Teacher, student</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Subject: General</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Platform: Web</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Type: Portfolio, Communication</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col s4">
+                          <div class="card filter grade1-12 student free">
+                              <div class="card-image">
+                                  <a href=" https://www.worldwildlife.org/pages/the-world-s-most-amazing-animals-are-now-on-your-iphone"><img src="http://is3.mzstatic.com/image/thumb/Purple118/v4/85/5e/dc/855edc54-01e1-b564-abf1-7e035e5c51cf/source/175x175bb.jpg"></a>
+
+                                  <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                              </div>
+                              <div class="card-content">
+                                <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“WWF Together”</span>
+                                  <p>It introduces students to amazing and endangered species and the work WWF does for them.</p>
+                              </div>
+                              <div class="card-action">
+                                <a class="chip card-panel grey lighten-3" href="#">Grade: 1-12</a>
+                                <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Subject: Science</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Type: Reference</a>
+                                <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                              </div>
+                          </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="container" style="margin-left: 230px;">
+                    <div class="section">
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="card filter teacher student grade1-12 free">
+                                    <div class="card-image">
+                                        <a href="https://explaineverything.com/"><img src="http://is5.mzstatic.com/image/thumb/Purple128/v4/e6/22/24/e6222423-edac-110d-b1ad-de7b76330e8c/source/175x175bb.jpg"></a>
+
+                                        <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                      <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Explain Everything”</span>
+                                        <p>It is an interactive whiteboard that let students visualize, share, and grow ideas in a collaborative space.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a class="chip card-panel grey lighten-3" href="#">Grade: 1-12</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">User: Teacher, student</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Subject: General</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android, Win</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Type: Animation, Collaboration</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s4">
+                                <div class="card filter grade7-12 student free">
+                                    <div class="card-image">
+                                        <a href="https://photomath.net/en/"><img src="https://photomath.net/presskit/PhotoMath/logos/Photomath-2.0-icon-RGB.png"></a>
+
+                                        <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Photomath”</span>
+                                        <p>It scans mathematical equations and solves them with a detailed step-by-step instructions.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a class="chip card-panel grey lighten-3" href="#">Grade: 7-12</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Subject: Math</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Platform:iOS, Android</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Type: Calculator, Reference</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s4">
+                                <div class="card filter grade4-6 student paid">
+                                    <div class="card-image">
+                                        <a href="http://spinlight.com/apps/"><img src="http://is4.mzstatic.com/image/thumb/Purple111/v4/14/bd/b1/14bdb14e-8728-ebd8-1554-bbf3cba9b3cb/source/175x175bb.jpg"></a>
+
+                                        <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                      <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Operation Math”</span>
+                                        <p>It is a spy-themed game that transforms math drills into a global learning adventure.</p>
+                                    </div>
+                                    <div class="card-action">
+                                      <a class="chip card-panel grey lighten-3" href="#">Grade: 4-6</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Subject: Math</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Type: Game</a>
+                                      <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="container" style="margin-left: 230px;">
+                          <div class="section">
+                              <div class="row">
+                                  <div class="col s4">
+                                      <div class="card filter gradek-6 student free">
+                                          <div class="card-image">
+                                              <a href="https://toontastic.withgoogle.com/"><img src="http://is4.mzstatic.com/image/thumb/Purple117/v4/a5/7d/1e/a57d1e0f-a9e1-8727-fa64-9f0e234bcbdd/source/175x175bb.jpg"></a>
+
+                                              <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                          </div>
+                                          <div class="card-content">
+                                            <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“ Toontastic 3D”</span>
+                                              <p>It helps students to can draw, animate, and narrate their own cartoons for storytelling.</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="chip card-panel grey lighten-3" href="#">Grade: k-6</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Subject: ELA</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Type: Animation</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col s4">
+                                      <div class="card filter gradek-1 student free paid">
+                                          <div class="card-image">
+                                              <a href=" https://www.teachyourmonstertoread.com/"><img src="http://is1.mzstatic.com/image/thumb/Purple122/v4/62/4e/73/624e73be-d3dd-14d8-9d6e-06d1133aa73d/source/175x175bb.jpg"></a>
+
+                                              <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                          </div>
+                                          <div class="card-content">
+                                            <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Teach Your Monster to Read”</span>
+                                              <p> It is a phonics and reading game that’s helped many children learn to read.</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="chip card-panel grey lighten-3" href="#">Grade: k-1</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Subject: ELA</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Platform:iOS, Android, Web</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Type: Game</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Price: Free/Paid</a>
+                                          </div>
+                                      </div>
+                                  </div>
+
+                                  <div class="col s4">
+                                      <div class="card filter grade9-12 student paid">
+                                          <div class="card-image">
+                                              <a href=" https://www.sketchbook.com/"><img src="http://is3.mzstatic.com/image/thumb/Purple118/v4/c4/3a/6b/c43a6b89-6481-7368-ca17-c29d0a811809/source/175x175bb.jpg"></a>
+
+                                              <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                          </div>
+                                          <div class="card-content">
+                                            <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“ Autodesk SketchBook”</span>
+                                              <p>It is a professional drawing app for anyone who likes to capture their ideas in digital form.</p>
+                                          </div>
+                                          <div class="card-action">
+                                            <a class="chip card-panel grey lighten-3" href="#">Grade: 9-12</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Subject: Art</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android, Mac, Win</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Type: Design</a>
+                                            <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="container" style="margin-left: 230px;">
+                                <div class="section">
+                                    <div class="row">
+                                        <div class="col s4">
+                                            <div class="card filter grade1-12 student free">
+                                                <div class="card-image">
+                                                    <a href="https://www.nasa.gov/nasaapp"><img src="http://is1.mzstatic.com/image/thumb/Purple122/v4/2b/3e/23/2b3e23c1-96c3-fbf1-46af-0e3ebb5b57b3/source/175x175bb.jpg"></a>
+
+                                                    <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                                </div>
+                                                <div class="card-content">
+                                                  <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“NASA”</span>
+                                                    <p>It allows students to explore the latest images, videos, mission information, news, feature stories, and tweets about NASA.</p>
+                                                </div>
+                                                <div class="card-action">
+                                                  <a class="chip card-panel grey lighten-3" href="#">Grade: 1-12</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Subject: Science</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Platform: iOS, Android</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Type: Reference</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col s4">
+                                            <div class="card filter grade7-12 student free">
+                                                <div class="card-image">
+                                                    <a href=" https://www.icivics.org/games"><img src="https://pbs.twimg.com/profile_images/1099203667/B-g-C_400x400.png"></a>
+
+                                                    <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                                </div>
+                                                <div class="card-content">
+                                                  <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“iCivics”</span>
+                                                    <p>It is a website that hosts many educational games related to civic education.</p>
+                                                </div>
+                                                <div class="card-action">
+                                                  <a class="chip card-panel grey lighten-3" href="#">Grade: 7-12</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Subject: Social</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Platform:Web</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Type: Game</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Price: Free</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col s4">
+                                            <div class="card filter grade1-6 student paid">
+                                                <div class="card-image">
+                                                    <a href=" http://barefootworldatlas.com/"><img src="http://is1.mzstatic.com/image/thumb/Purple71/v4/ba/65/06/ba6506e5-cf2f-0890-fa17-22cb47bd50d2/source/175x175bb.jpg"></a>
+                                                    <a class="btn-floating halfway-fab waves-effect waves-light teal lighten-3" onclick="Materialize.toast('Successfully bookmarked!', 4000)"><i class="material-icons">bookmark_border</i></a>
+                                                </div>
+                                                <div class="card-content">
+                                                  <span class="green lighten-1 white-text" style="font-size:150%;font-family:verdana">“Barefoot World Atlas”</span>
+                                                    <p> It allows students to navigate around the interactive 3D globe and discover the rich wonders of our planet.</p>
+                                                </div>
+                                                <div class="card-action">
+                                                  <a class="chip card-panel grey lighten-3" href="#">Grade: 1-6</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">User: student</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Subject: Social</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Platform:OIS</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Type: Reference</a>
+                                                  <a class="chip card-panel grey lighten-3" href="#">Price: Paid</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+
+
+<!-- footer -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Learn</h5>
+        <p class="grey-text text-lighten-4">Our website provides a holistic solution to educational technology-related problems that educators experience.</p>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Support</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Team</a></li>
+          <li><a class="white-text" href="#!">Subscribe</a></li>
+          <li class="modal-trigger" data-target="modal3"><a class="white-text" href="#!">Contact Us</a></li>
+          <li class="modal-trigger" data-target="modal4"><a class="white-text" href="#!">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" target="_blank" href="https://www.facebook.com/">Facebook</a></li>
+          <li><a class="white-text" target="_blank" href="https://twitter.com/">Twitter</a></li>
+          <li><a class="white-text" target="_blank" href="https://plus.google.com/">Google+</a></li>
+          <li><a class="white-text" target="_blank" href="https://www.linkedin.com/">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      Made by <a class="amber-text accent-4" href="http://materializecss.com">Evelina Wongosari and Tianjiao Zhang</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Import jQuery -->
+<script type="text/javascript" href="js/jquery-3.2.1.min.js"></script>
+<!-- Import Materialize JS -->
+<script type="text/javascript"  href="js/materialize.min.js"></script>
+
+      </body>
+    </html>

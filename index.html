@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--For mobile-->
+    <title>Ed+Tech</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Import Materialize CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="sass/styles.css"  media="screen,projection"/>
+  </head>
+
+  <body>
+    <!-- Riot tag for content -->
+    <home></home>
+
+    <!-- Import jQuery -->
+    <script type="text/javascript" href="js/jquery-3.2.1.min.js"></script>
+    <!-- Import Materialize JS -->
+    <script type="text/javascript"  href="js/materialize.min.js"></script>
+
+    <!-- Import Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDaMK2n1fSIv4Tk5bEhveeBhlW_mepKU4o",
+      authDomain: "final-a47af.firebaseapp.com",
+      databaseURL: "https://final-a47af.firebaseio.com",
+      projectId: "final-a47af",
+      storageBucket: "final-a47af.appspot.com",
+      messagingSenderId: "1088911712969"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- Import Riot Tags -->
+    <script src="./tags/home.tag" type="riot/tag"></script>
+	  <script src="./tags/menu.tag" type="riot/tag"></script>
+    <script src="./tags/login.tag" type="riot/tag"></script>
+	  <script src="./tags/signup.tag" type="riot/tag"></script>
+    <script src="./tags/bottom.tag" type="riot/tag"></script>
+	  <script src="./tags/contact.tag" type="riot/tag"></script>
+    <script src="./tags/feedback.tag" type="riot/tag"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/riot@3.7/riot+compiler.min.js"></script>
+	  <script>
+      riot.mount('*');
+    </script>
+  </body>
+</html>
